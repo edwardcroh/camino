@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
 
-// import * as d3 from 'd3';
-
 // // var myChart = new RadialProgressChart('.testing', settings);
 
 // var settings = {

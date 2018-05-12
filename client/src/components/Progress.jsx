@@ -18,7 +18,14 @@ class Progress extends Component {
           value={this.state.ordered}
           max={this.state.total}
         />
-        <div>orders and completed orders</div>
+        <div style={{ float: 'left' }}>
+          <h3>Orders</h3>
+          <h2>135</h2>
+        </div>
+        <div style={{ float: 'right' }}>
+          <h3>Completed Orders</h3>
+          <h2>124</h2>
+        </div>
       </div>
     );
   }

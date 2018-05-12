@@ -38,6 +38,7 @@
     "material-ui": "^0.20.0",
     "nodemon": "^1.17.4",
     "radial-progress-chart": "0.0.4",
-    "react-chartjs-2": "^2.7.2"
+    "react-chartjs-2": "^2.7.2",
+    "react-swipeable-views": "^0.12.13"
   }
 }
