@@ -5,18 +5,6 @@ import Sales from './Sales.jsx';
 import { Tabs, Tab } from 'material-ui/Tabs';
 import SwipeableViews from 'react-swipeable-views';
 
-const styles = {
-  headline: {
-    fontSize: 24,
-    paddingTop: 16,
-    marginBottom: 12,
-    fontWeight: 400
-  },
-  slide: {
-    padding: 10
-  }
-};
-
 class Date extends Component {
   constructor(props) {
     super(props);
@@ -49,12 +37,12 @@ class Date extends Component {
             <Data />
             <Sales />
           </div>
-          <div style={styles.slide}>
+          <div style={{ padding: '10px' }}>
             <Progress />
             <Data />
             <Sales />
           </div>
-          <div style={styles.slide}>
+          <div style={{ padding: '10px' }}>
             <Progress />
             <Data />
             <Sales />

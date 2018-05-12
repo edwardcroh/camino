@@ -90,21 +90,21 @@ class Data extends Component {
                 {
                   label: 'HOODIE',
                   data: [12, 4, 7, 2, 5, 2, 3, 10, 11, 15],
-                  backgroundColor: 'red',
+                  backgroundColor: '#B75464',
                   borderWidth: 1,
                   radius: 0
                 },
                 {
                   label: 'FITTED CAP',
                   data: [2, 12, 1, 3, 8, 11, 4, 6, 8, 10],
-                  backgroundColor: 'orange',
+                  backgroundColor: '#C48745',
                   borderWidth: 1,
                   radius: 0
                 },
                 {
                   label: 'BRACELET',
                   data: [10, 2, 4, 1, 5, 7, 5, 3, 6, 7],
-                  backgroundColor: 'blue',
+                  backgroundColor: '#00D5DC',
                   borderWidth: 1,
                   radius: 0
                 }
@@ -114,6 +114,9 @@ class Data extends Component {
             // height={50}
             options={{
               maintainAspectRatio: false,
+              legend: {
+                display: false
+              },
               scales: {
                 xAxes: [
                   {

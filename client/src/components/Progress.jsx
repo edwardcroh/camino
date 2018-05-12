@@ -12,11 +12,12 @@ class Progress extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ padding: '20px 0px' }}>
         <LinearProgress
           mode="determinate"
           value={this.state.ordered}
           max={this.state.total}
+          color="rgb(255, 132, 127)"
         />
         <div style={{ float: 'left' }}>
           <h3>Orders</h3>
