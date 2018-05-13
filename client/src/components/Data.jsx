@@ -79,9 +79,11 @@ class Data extends Component {
 
   render() {
     return (
-      <div className="data">
-        <h2>Total Sales</h2>
-        <h4>$448.50</h4>
+      <div>
+        <div className="data">
+          <h2>Total Sales</h2>
+          <h4 className="total">$448.50</h4>
+        </div>
         <div id="testing">
           <Line
             data={{
@@ -110,8 +112,6 @@ class Data extends Component {
                 }
               ]
             }}
-            // width={100}
-            // height={50}
             options={{
               maintainAspectRatio: false,
               legend: {

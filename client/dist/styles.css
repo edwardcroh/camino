@@ -4,6 +4,48 @@ body {
     rgb(125, 64, 104),
     rgb(67, 37, 69)
   );
-
   color: rgb(255, 242, 210);
+  font-family: 'Roboto', sans-serif;
+}
+
+.salesTotal {
+  color: rgb(232, 119, 119);
+}
+
+.data {
+  text-align: center;
+}
+
+.total {
+  color: rgb(191, 98, 113);
+}
+
+.mainNav {
+  opacity: 0.6;
+}
+
+.salesTable {
+  width: 700px;
+  margin: 10px auto;
+  overflow-x: auto;
+}
+
+.legendIcon {
+  margin-left: 15px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  float: left;
+}
+
+.itemDescription {
+  /* text-align: center; */
+  padding-left: 15px;
+}
+
+.price {
+  color: rgb(232, 119, 119);
+  width: 100%;
+  float: right;
 }

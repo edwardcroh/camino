@@ -9,53 +9,43 @@ class Sales extends Component {
   render() {
     return (
       <div>
-        <h2>Sales</h2>
-        <h4>135</h4>
+        <div className="data">
+          <h2>Sales</h2>
+          <h4 className="salesTotal">135</h4>
+        </div>
         <div>
-          <table style={{ width: '100%' }}>
+          {/* <table className="salesTable">
             <tr>
               <td
                 style={{
-                  height: '20px',
-                  width: '20px',
-                  backgroundColor: 'red',
-                  borderRadius: '50%',
-                  display: 'inlineBlock',
-                  float: 'right'
+                  backgroundColor: '#C85650'
                 }}
+                className="legendIcon"
               />
-              <td>Hoodie</td>
-              <td style={{ float: 'right' }}>$74.00</td>
+              <td className="itemDescription">Hoodie</td>
+              <td className="price">$74.00</td>
             </tr>
             <tr>
               <td
                 style={{
-                  height: '20px',
-                  width: '20px',
-                  backgroundColor: 'orange',
-                  borderRadius: '50%',
-                  display: 'inlineBlock',
-                  float: 'right'
+                  backgroundColor: '#FFC541'
                 }}
+                className="legendIcon"
               />
-              <td>Fitted Cap</td>
-              <td style={{ float: 'right' }}>$69.50</td>
+              <td className="itemDescription">Fitted Cap</td>
+              <td className="price">$69.50</td>
             </tr>
             <tr>
               <td
                 style={{
-                  height: '20px',
-                  width: '20px',
-                  backgroundColor: 'blue',
-                  borderRadius: '50%',
-                  display: 'inlineBlock',
-                  float: 'right'
+                  backgroundColor: '#00D5DC'
                 }}
+                className="legendIcon"
               />
-              <td>Bracelet</td>
-              <td style={{ float: 'right' }}>$39.05</td>
+              <td className="itemDescription">Bracelet</td>
+              <td className="price">$39.05</td>
             </tr>
-          </table>
+          </table> */}
         </div>
       </div>
     );
