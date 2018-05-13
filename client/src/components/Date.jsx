@@ -28,9 +28,9 @@ class Date extends Component {
           onChange={this.handleChange}
           value={this.state.slideIndex}
         >
-          <Tab label="TODAY" value={0} />
-          <Tab label="WEEK" value={1} />
-          <Tab label="MONTH" value={2} />
+          <Tab label="Today" value={0} />
+          <Tab label="Week" value={1} />
+          <Tab label="Month" value={2} />
         </Tabs>
         <SwipeableViews
           index={this.state.slideIndex}
@@ -41,12 +41,12 @@ class Date extends Component {
             <Data />
             <Sales />
           </div>
-          <div style={{ padding: '10px' }}>
+          <div>
             <Progress />
             <Data />
             <Sales />
           </div>
-          <div style={{ padding: '10px' }}>
+          <div>
             <Progress />
             <Data />
             <Sales />

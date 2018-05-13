@@ -10,10 +10,11 @@ class Nav extends Component {
 
   render() {
     return (
-      <div className="main-nav">
+      <div>
         <AppBar
+          style={{ background: 'transparent', boxShadow: 'none' }}
           title="DASHBOARD"
-          titleStyle={{ textAlign: 'center' }}
+          titleStyle={{ textAlign: 'center', color: 'rgb(255, 242, 210)' }}
           iconClassNameRight="muidocs-icon-navigation-expand-more"
           iconElementRight={
             <FlatButton>
