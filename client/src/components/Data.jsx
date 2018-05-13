@@ -81,8 +81,9 @@ class Data extends Component {
     return (
       <div>
         <div className="data">
-          <h2>Total Sales</h2>
-          <h4 className="total">$448.50</h4>
+          <span className="info-title">Total Sales</span>
+          <br />
+          <span className="total">$448.50</span>
         </div>
         <div id="testing">
           <Line

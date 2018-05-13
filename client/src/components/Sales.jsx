@@ -10,49 +10,47 @@ class Sales extends Component {
     return (
       <div>
         <div className="data">
-          <h2>Sales</h2>
-          <h4 className="salesTotal">135</h4>
+          <span className="info-title">Sales</span>
+          <br />
+          <span className="sales-total">135</span>
         </div>
         <div>
-          <table className="salesTable">
+          <table className="sales-table">
             <tr>
-              <td className="tableRow">
+              <td className="table-row">
                 <span
                   style={{
                     backgroundColor: '#C85650'
                   }}
-                  className="legendIcon"
+                  className="legend-icon"
                 />{' '}
-                <span className="itemDescription">Hoodie</span>
+                <span className="item-description">Hoodie</span>
                 <span className="price">$74.00</span>
               </td>
-              {/* <td className="price">$74.00</td> */}
             </tr>
             <tr>
-              <td className="tableRow">
+              <td className="table-row">
                 <span
                   style={{
                     backgroundColor: '#FFC541'
                   }}
-                  className="legendIcon"
+                  className="legend-icon"
                 />{' '}
-                <span className="itemDescription">Fitted Cap</span>
+                <span className="item-description">Fitted Cap</span>
                 <span className="price">$69.50</span>
               </td>
-              {/* <td className="price">$69.50</td> */}
             </tr>
             <tr>
-              <td className="tableRow">
+              <td className="table-row">
                 <span
                   style={{
                     backgroundColor: '#00D5DC'
                   }}
-                  className="legendIcon"
+                  className="legend-icon"
                 />{' '}
-                <span className="itemDescription">Bracelet</span>
+                <span className="item-description">Bracelet</span>
                 <span className="price">$39.05</span>
               </td>
-              {/* <td className="price">$39.05</td> */}
             </tr>
           </table>
         </div>

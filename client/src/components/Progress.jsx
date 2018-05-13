@@ -22,29 +22,20 @@ class Progress extends Component {
 
         <table width="100%">
           <tr>
-            <th style={{ float: 'left' }}>Orders</th>
-            <th style={{ float: 'right' }}>Completed Orders</th>
+            <th style={{ float: 'left', paddingTop: '10px' }}>Orders</th>
+            <th style={{ float: 'right', paddingTop: '10px' }}>
+              Completed Orders
+            </th>
           </tr>
           <tr>
-            <td style={{ float: 'left' }} className="salesTotal">
+            <td style={{ float: 'left' }} className="sales-total">
               135
             </td>
-            <td style={{ float: 'right' }} className="salesTotal">
+            <td style={{ float: 'right' }} className="sales-total">
               124
             </td>
           </tr>
         </table>
-
-        {/* <div>
-          <div style={{ float: 'left' }}>
-            <h3>Orders</h3>
-            <h2 className="salesTotal">135</h2>
-          </div>
-          <div style={{ float: 'right' }}>
-            <h3>Completed Orders</h3>
-            <h2 className="salesTotal">124</h2>
-          </div>
-        </div> */}
       </div>
     );
   }

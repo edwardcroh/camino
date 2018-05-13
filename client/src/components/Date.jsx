@@ -23,7 +23,11 @@ class Date extends Component {
   render() {
     return (
       <div>
-        <Tabs onChange={this.handleChange} value={this.state.slideIndex}>
+        <Tabs
+          className="tabs"
+          onChange={this.handleChange}
+          value={this.state.slideIndex}
+        >
           <Tab label="TODAY" value={0} />
           <Tab label="WEEK" value={1} />
           <Tab label="MONTH" value={2} />

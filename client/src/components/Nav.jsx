@@ -10,7 +10,7 @@ class Nav extends Component {
 
   render() {
     return (
-      <div className="mainNav">
+      <div className="main-nav">
         <AppBar
           title="DASHBOARD"
           titleStyle={{ textAlign: 'center' }}
