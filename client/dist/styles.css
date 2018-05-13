@@ -25,27 +25,28 @@ body {
 }
 
 .salesTable {
-  width: 700px;
+  width: 80%;
   margin: 10px auto;
   overflow-x: auto;
 }
 
+.tableRow {
+  padding-bottom: 10px;
+}
+
 .legendIcon {
-  margin-left: 15px;
-  height: 15px;
-  width: 15px;
+  height: 14px;
+  width: 14px;
   border-radius: 50%;
   display: inline-block;
-  float: left;
+  vertical-align: middle;
 }
 
 .itemDescription {
-  /* text-align: center; */
-  padding-left: 15px;
+  padding-left: 20px;
 }
 
 .price {
   color: rgb(232, 119, 119);
-  width: 100%;
   float: right;
 }

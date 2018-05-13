@@ -14,38 +14,47 @@ class Sales extends Component {
           <h4 className="salesTotal">135</h4>
         </div>
         <div>
-          {/* <table className="salesTable">
+          <table className="salesTable">
             <tr>
-              <td
-                style={{
-                  backgroundColor: '#C85650'
-                }}
-                className="legendIcon"
-              />
-              <td className="itemDescription">Hoodie</td>
-              <td className="price">$74.00</td>
+              <td className="tableRow">
+                <span
+                  style={{
+                    backgroundColor: '#C85650'
+                  }}
+                  className="legendIcon"
+                />{' '}
+                <span className="itemDescription">Hoodie</span>
+                <span className="price">$74.00</span>
+              </td>
+              {/* <td className="price">$74.00</td> */}
             </tr>
             <tr>
-              <td
-                style={{
-                  backgroundColor: '#FFC541'
-                }}
-                className="legendIcon"
-              />
-              <td className="itemDescription">Fitted Cap</td>
-              <td className="price">$69.50</td>
+              <td className="tableRow">
+                <span
+                  style={{
+                    backgroundColor: '#FFC541'
+                  }}
+                  className="legendIcon"
+                />{' '}
+                <span className="itemDescription">Fitted Cap</span>
+                <span className="price">$69.50</span>
+              </td>
+              {/* <td className="price">$69.50</td> */}
             </tr>
             <tr>
-              <td
-                style={{
-                  backgroundColor: '#00D5DC'
-                }}
-                className="legendIcon"
-              />
-              <td className="itemDescription">Bracelet</td>
-              <td className="price">$39.05</td>
+              <td className="tableRow">
+                <span
+                  style={{
+                    backgroundColor: '#00D5DC'
+                  }}
+                  className="legendIcon"
+                />{' '}
+                <span className="itemDescription">Bracelet</span>
+                <span className="price">$39.05</span>
+              </td>
+              {/* <td className="price">$39.05</td> */}
             </tr>
-          </table> */}
+          </table>
         </div>
       </div>
     );
