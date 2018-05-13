@@ -1,8 +1,41 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
 
-// // var myChart = new RadialProgressChart('.testing', settings);
+var options = {
+  min: 650,
+  max: 850,
+  diameter: 200,
+  //    center: function (value) {
+  //      return "test:" + value;
+  //    },
+  //center: '300',
+  //center: ['300', '100'],
+  series: [
+    {
+      title: 'walk',
+      labelStart: '\uF105',
+      //labelEnd: '10m',
+      color: {
+        linearGradient: {
+          x1: '0%',
+          y1: '100%',
+          x2: '50%',
+          y2: '0%',
+          spreadMethod: 'pad'
+        },
+        stops: [
+          { offset: '0%', 'stop-color': '#fe08b5', 'stop-opacity': 1 },
+          { offset: '100%', 'stop-color': '#ff1410', 'stop-opacity': 1 }
+        ]
+      },
+      // color: '#fe08b5',
+      // color: new RadialProgressChart.Color.Interpolate("#ff0000", "#0000ff")
+      value: 800
+    }
+  ]
+};
 
+var myChart = new RadialProgressChart('#radial-chart', options);
 // var settings = {
 //   diameter: 100,
 //   stroke: {
@@ -85,7 +118,7 @@ class Data extends Component {
           <br />
           <span className="total">$448.50</span>
         </div>
-        <div id="testing">
+        <div>
           <Line
             data={{
               labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
@@ -141,6 +174,10 @@ class Data extends Component {
               }
             }}
           />
+        </div>
+
+        <div>
+          <div id="radial-chart">?!?!?!</div>
         </div>
       </div>
     );

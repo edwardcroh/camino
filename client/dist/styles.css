@@ -5,11 +5,9 @@ body {
     rgb(67, 37, 69)
   );
   color: rgb(255, 242, 210);
-  font-family: 'Roboto', sans-serif;
-}
-
-.tabs {
-  background-color: transparent !important;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Lato', sans-serif;
+  font-weight: 'lighter';
 }
 
 .sales-total {
@@ -21,16 +19,16 @@ body {
   padding: 20px 0 20px;
 }
 
-.main-nav {
-  opacity: 0.6;
-}
-
 .info-title {
   font-size: 25px;
 }
 
 .total {
   color: rgb(191, 98, 113);
+}
+
+#radial-chart {
+  text-align: center;
 }
 
 .sales-table {

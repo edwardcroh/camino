@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AppBar from 'material-ui/AppBar';
-import FlatButton from 'material-ui/FlatButton';
+import IconButton from 'material-ui/IconButton';
 import Search from 'material-ui/svg-icons/action/search';
 
 class Nav extends Component {
@@ -12,21 +12,21 @@ class Nav extends Component {
     return (
       <div>
         <AppBar
-          style={{ background: 'transparent', boxShadow: 'none' }}
+          style={{
+            position: 'static',
+            background: 'transparent',
+            boxShadow: 'none'
+          }}
           title="DASHBOARD"
-          titleStyle={{ textAlign: 'center', color: 'rgb(255, 242, 210)' }}
-          iconClassNameRight="muidocs-icon-navigation-expand-more"
+          titleStyle={{
+            textAlign: 'center',
+            color: 'rgb(255, 242, 210)',
+            fontWeight: 'lighter'
+          }}
           iconElementRight={
-            <FlatButton>
-              <Search
-                style={{
-                  color: 'white',
-                  display: 'block',
-                  marginLeft: 'auto',
-                  marginRight: 'auto'
-                }}
-              />
-            </FlatButton>
+            <IconButton>
+              <Search />
+            </IconButton>
           }
         />
       </div>
