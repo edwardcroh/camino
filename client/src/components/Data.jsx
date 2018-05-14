@@ -71,10 +71,6 @@ class Data extends Component {
             }}
           />
         </div>
-
-        <div>
-          <div id="radial-chart">?!?!?!</div>
-        </div>
       </div>
     );
   }

@@ -32,18 +32,15 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "chart.js": "^2.7.2",
-    "d3": "^5.4.0",
     "deep-extend": "^0.5.1",
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "material-ui": "^0.20.0",
+    "moment": "^2.22.1",
     "nodemon": "^1.17.4",
-    "radial-progress-chart": "0.0.4",
     "react-chartjs-2": "^2.7.2",
     "react-redux": "^5.0.7",
-    "react-swipeable-views": "^0.12.13",
     "redux": "^4.0.0",
-    "redux-devtools-extension": "^2.13.2",
-    "redux-logger": "^3.0.6"
+    "redux-devtools-extension": "^2.13.2"
   }
 }

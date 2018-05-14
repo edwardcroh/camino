@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-import Progress from './Progress.jsx';
-import Data from './Data.jsx';
-import Sales from './Sales.jsx';
+import Main from './Main.jsx';
 import { Tabs, Tab } from 'material-ui/Tabs';
-import SwipeableViews from 'react-swipeable-views';
-// import { connect } from 'react-redux';
-// import actions from '../redux/actions/index';
+import { connect } from 'react-redux';
+import { DATES, setFilteredOrders } from '../redux/actions';
 
 const tabStyle = {
   active_tab: {
@@ -53,51 +50,42 @@ class Date extends Component {
             label="Today"
             value={0}
             style={this.getStyle(this.state.slideIndex === 0)}
-          />
+            onActive={() => this.props.setFilteredOrders(DATES.TODAY)}
+          >
+            <Main />
+          </Tab>
           <Tab
             label="Week"
             value={1}
             style={this.getStyle(this.state.slideIndex === 1)}
-          />
+            onActive={() => this.props.setFilteredOrders(DATES.WEEK)}
+          >
+            <Main />
+          </Tab>
           <Tab
             label="Month"
             value={2}
             style={this.getStyle(this.state.slideIndex === 2)}
-          />
+            onActive={() => this.props.setFilteredOrders(DATES.MONTH)}
+          >
+            <Main />
+          </Tab>
         </Tabs>
-        <SwipeableViews
-          index={this.state.slideIndex}
-          onChangeIndex={this.handleChange}
-        >
-          <div>
-            <Progress />
-            <Data />
-            <Sales />
-          </div>
-          <div>
-            <Progress />
-            <Data />
-            <Sales />
-          </div>
-          <div>
-            <Progress />
-            <Data />
-            <Sales />
-          </div>
-        </SwipeableViews>
-        {console.log(this.props)}
       </div>
     );
   }
 }
 
-// const mapStateToProps = state => {
-//   return {
-//     getToday: state.data_today,
-//     getWeek: state.data_week,
-//     getMonth: state.data_month
-//   };
-// };
+const mapStateToProps = state => {
+  return {
+    orders: state.ordersByDate
+  };
+};
 
-// export default connect(mapStateToProps)(Date);
-export default Date;
+// const mapDispatchToProps = dispatch => ({
+//   DATES: TODAY => dispatch(actions.DATES(TODAY)),
+//   DATES: WEEK => dispatch(actions.DATES(WEEK)),
+//   DATES: MONTH => dispatch(actions.DATES(MONTH))
+// });
+
+export default connect(mapStateToProps, { setFilteredOrders })(Date);

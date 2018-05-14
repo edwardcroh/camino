@@ -7,7 +7,7 @@ import Nav from './components/Nav.jsx';
 import Date from './components/Date.jsx';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-class Main extends React.Component {
+class App extends React.Component {
   render() {
     return (
       <div>
@@ -21,7 +21,7 @@ class Main extends React.Component {
 ReactDOM.render(
   <Provider store={store}>
     <MuiThemeProvider>
-      <Main />
+      <App />
     </MuiThemeProvider>
   </Provider>,
   document.getElementById('app')
