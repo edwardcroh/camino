@@ -19,7 +19,6 @@ class Progress extends Component {
           max={this.state.total}
           color="rgb(255, 132, 127)"
         />
-
         <table width="100%">
           <thead>
             <tr>

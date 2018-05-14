@@ -4,6 +4,8 @@ import Data from './Data.jsx';
 import Sales from './Sales.jsx';
 import { Tabs, Tab } from 'material-ui/Tabs';
 import SwipeableViews from 'react-swipeable-views';
+// import { connect } from 'react-redux';
+// import actions from '../redux/actions/index';
 
 const tabStyle = {
   active_tab: {
@@ -83,9 +85,19 @@ class Date extends Component {
             <Sales />
           </div>
         </SwipeableViews>
+        {console.log(this.props)}
       </div>
     );
   }
 }
 
+// const mapStateToProps = state => {
+//   return {
+//     getToday: state.data_today,
+//     getWeek: state.data_week,
+//     getMonth: state.data_month
+//   };
+// };
+
+// export default connect(mapStateToProps)(Date);
 export default Date;
