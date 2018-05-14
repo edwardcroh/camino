@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon index.js && webpack",
     "test": "mocha",
-    "build": "webpack",
+    "build": "webpack -p",
     "webpack": "webpack -w --mode=development"
   },
   "repository": {
