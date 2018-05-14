@@ -4,24 +4,53 @@ import { Line, Doughnut } from 'react-chartjs-2';
 class Data extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      data: this.props.data,
+      total: this.props.total
+    };
+  }
+
+  componentWillReceiveProps() {
+    this.setState({
+      totalOrders: this.props.total
+    });
+  }
+
+  labelCountHelper(num) {
+    let result = [];
+    for (var i = 1; i < num.length; i++) {
+      result.push(i);
+    }
+    return result;
+  }
+
+  randomDataHelper(num) {
+    let result = [];
+    for (var i = 1; i < num.length; i++) {
+      result.push(Math.floor(Math.random() * (5 - 1 + 1)) + 1);
+    }
+    return result;
   }
 
   render() {
     return (
       <div>
+        {console.log('!!!!!///', this.state)}
         <div className="data">
           <span className="info-title">Total Sales</span>
           <br />
-          <span className="total">$448.50</span>
+          <span className="total">${this.props.total}</span>
         </div>
         <div>
           <Line
             data={{
-              labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+              // labels: this.labelCountHelper(this.state.total),
+              labels: [1, 2, 3, 4, 5],
               datasets: [
                 {
                   label: 'HOODIE',
-                  data: [12, 4, 7, 2, 5, 2, 3, 10, 11, 15],
+                  // data: this.randomDataHelper(this.state.total),
+                  data: [4, 3, 6, 3],
                   backgroundColor: '#B75464',
                   borderWidth: 1,
                   radius: 0
@@ -100,3 +129,106 @@ class Data extends Component {
 }
 
 export default Data;
+
+// import React, { Component } from 'react';
+// import { Line, Doughnut } from 'react-chartjs-2';
+
+// class Data extends Component {
+//   constructor(props) {
+//     super(props);
+//   }
+
+//   render() {
+//     return (
+//       <div>
+//         <div className="data">
+//           <span className="info-title">Total Sales</span>
+//           <br />
+//           <span className="total">$448.50</span>
+//         </div>
+//         <div>
+//           <Line
+//             data={{
+//               labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+//               datasets: [
+//                 {
+//                   label: 'HOODIE',
+//                   data: [12, 4, 7, 2, 5, 2, 3, 10, 11, 15],
+//                   backgroundColor: '#B75464',
+//                   borderWidth: 1,
+//                   radius: 0
+//                 },
+//                 {
+//                   label: 'FITTED CAP',
+//                   data: [2, 12, 1, 3, 8, 11, 4, 6, 8, 10],
+//                   backgroundColor: '#C48745',
+//                   borderWidth: 1,
+//                   radius: 0
+//                 },
+//                 {
+//                   label: 'BRACELET',
+//                   data: [10, 2, 4, 1, 5, 7, 5, 3, 6, 7],
+//                   backgroundColor: '#00D5DC',
+//                   borderWidth: 1,
+//                   radius: 0
+//                 }
+//               ]
+//             }}
+//             options={{
+//               maintainAspectRatio: false,
+//               legend: {
+//                 display: false
+//               },
+//               scales: {
+//                 xAxes: [
+//                   {
+//                     gridLines: {
+//                       display: false
+//                     }
+//                   }
+//                 ],
+//                 yAxes: [
+//                   {
+//                     stacked: true,
+//                     ticks: {
+//                       beginAtZero: true,
+//                       display: false
+//                     },
+//                     gridLines: {
+//                       display: false
+//                     }
+//                   }
+//                 ]
+//               }
+//             }}
+//           />
+//         </div>
+//         <br />
+//         <div>
+//           <Doughnut
+//             data={{
+//               labels: ['Hoodie', 'Fitted Cap', 'Bracelet'],
+//               datasets: [
+//                 {
+//                   data: [300, 50, 100],
+//                   backgroundColor: ['#C85650', '#FFC541', '#00D5DC'],
+//                   hoverBackgroundColor: ['#C85650', '#FFC541', '#00D5DC']
+//                 }
+//               ]
+//             }}
+//             options={{
+//               maintainAspectRatio: false,
+//               legend: {
+//                 labels: {
+//                   fontColor: 'rgb(255, 242, 210)'
+//                 }
+//               }
+//             }}
+//           />
+//         </div>
+//       </div>
+//     );
+//   }
+// }
+
+// export default Data;

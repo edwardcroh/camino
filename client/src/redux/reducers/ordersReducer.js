@@ -5,15 +5,11 @@ const orders = [
     purchaseDate: moment().subtract(5, 'days'),
     items: [
       {
-        name: 'hoodie',
+        name: 'Hoodie',
         price: 40
       },
       {
-        name: 'fitted cap',
-        price: 25
-      },
-      {
-        name: 'shoes',
+        name: 'Bracelet',
         price: 30
       }
     ]
@@ -22,15 +18,15 @@ const orders = [
     purchaseDate: moment().subtract(3, 'days'),
     items: [
       {
-        name: 'hoodie',
+        name: 'Hoodie',
         price: 40
       },
       {
-        name: 'fitted cap',
+        name: 'Fitted Cap',
         price: 25
       },
       {
-        name: 'shoes',
+        name: 'Bracelet',
         price: 30
       }
     ]
@@ -39,15 +35,7 @@ const orders = [
     purchaseDate: moment().subtract(6, 'days'),
     items: [
       {
-        name: 'hoodie',
-        price: 40
-      },
-      {
-        name: 'fitted cap',
-        price: 25
-      },
-      {
-        name: 'shoes',
+        name: 'Bracelet',
         price: 30
       }
     ]
@@ -56,16 +44,12 @@ const orders = [
     purchaseDate: moment().subtract(2, 'days'),
     items: [
       {
-        name: 'hoodie',
+        name: 'Hoodie',
         price: 40
       },
       {
-        name: 'fitted cap',
+        name: 'Fitted Cap',
         price: 25
-      },
-      {
-        name: 'shoes',
-        price: 30
       }
     ]
   },
@@ -73,15 +57,15 @@ const orders = [
     purchaseDate: moment().subtract(23, 'days'),
     items: [
       {
-        name: 'hoodie',
+        name: 'Hoodie',
         price: 40
       },
       {
-        name: 'fitted cap',
+        name: 'Fitted Cap',
         price: 25
       },
       {
-        name: 'shoes',
+        name: 'Bracelet',
         price: 30
       }
     ]
@@ -90,15 +74,11 @@ const orders = [
     purchaseDate: moment().subtract(29, 'days'),
     items: [
       {
-        name: 'hoodie',
-        price: 40
-      },
-      {
-        name: 'fitted cap',
+        name: 'Fitted Cap',
         price: 25
       },
       {
-        name: 'shoes',
+        name: 'Bracelet',
         price: 30
       }
     ]
@@ -107,16 +87,8 @@ const orders = [
     purchaseDate: moment().subtract(28, 'days'),
     items: [
       {
-        name: 'hoodie',
+        name: 'Hoodie',
         price: 40
-      },
-      {
-        name: 'fitted cap',
-        price: 25
-      },
-      {
-        name: 'shoes',
-        price: 30
       }
     ]
   },
@@ -124,15 +96,15 @@ const orders = [
     purchaseDate: moment().subtract(27, 'days'),
     items: [
       {
-        name: 'hoodie',
+        name: 'Hoodie',
         price: 40
       },
       {
-        name: 'fitted cap',
+        name: 'Fitted Cap',
         price: 25
       },
       {
-        name: 'shoes',
+        name: 'Bracelet',
         price: 30
       }
     ]
@@ -141,16 +113,12 @@ const orders = [
     purchaseDate: moment().subtract(25, 'days'),
     items: [
       {
-        name: 'hoodie',
+        name: 'Hoodie',
         price: 40
       },
       {
-        name: 'fitted cap',
+        name: 'Fitted Cap',
         price: 25
-      },
-      {
-        name: 'shoes',
-        price: 30
       }
     ]
   },
@@ -158,15 +126,7 @@ const orders = [
     purchaseDate: moment().subtract(12, 'days'),
     items: [
       {
-        name: 'hoodie',
-        price: 40
-      },
-      {
-        name: 'fitted cap',
-        price: 25
-      },
-      {
-        name: 'shoes',
+        name: 'Bracelet',
         price: 30
       }
     ]
@@ -175,15 +135,15 @@ const orders = [
     purchaseDate: moment().subtract(20, 'days'),
     items: [
       {
-        name: 'hoodie',
+        name: 'Hoodie',
         price: 40
       },
       {
-        name: 'fitted cap',
+        name: 'Fitted Cap',
         price: 25
       },
       {
-        name: 'shoes',
+        name: 'Bracelet',
         price: 30
       }
     ]
@@ -192,15 +152,11 @@ const orders = [
     purchaseDate: moment().subtract(1, 'days'),
     items: [
       {
-        name: 'hoodie',
+        name: 'Hoodie',
         price: 40
       },
       {
-        name: 'fitted cap',
-        price: 25
-      },
-      {
-        name: 'shoes',
+        name: 'Bracelet',
         price: 30
       }
     ]
@@ -209,15 +165,15 @@ const orders = [
     purchaseDate: moment(),
     items: [
       {
-        name: 'hoodie',
+        name: 'Hoodie',
         price: 40
       },
       {
-        name: 'fitted cap',
+        name: 'Fitted Cap',
         price: 25
       },
       {
-        name: 'shoes',
+        name: 'Bracelet',
         price: 30
       }
     ]

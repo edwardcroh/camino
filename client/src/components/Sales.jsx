@@ -3,16 +3,22 @@ import React, { Component } from 'react';
 class Sales extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      saleTotal: this.props.info.totalOrders,
+      hoodieTotal: this.props.info.hoodie.length,
+      fittedTotal: this.props.info.fitted.length,
+      braceletTotal: this.props.info.bracelet.length
+    };
   }
 
   render() {
     return (
       <div>
         <div className="data">
+          {console.log('^^^^^', this.props.info)}
           <span className="info-title">Sales</span>
           <br />
-          <span className="sales-total">135</span>
+          <span className="sales-total">{this.state.saleTotal}</span>
         </div>
         <div>
           <table className="sales-table">

@@ -38,7 +38,6 @@ class Date extends Component {
   render() {
     return (
       <div>
-        {console.log('?????', this.props.orders)}
         <Tabs
           onChange={this.handleChange}
           value={this.state.slideIndex}
@@ -53,7 +52,7 @@ class Date extends Component {
             style={this.getStyle(this.state.slideIndex === 0)}
             onActive={() => this.props.setFilteredOrders(DATES.TODAY)}
           >
-            <Main info={this.props.orders} />
+            <Main sales={this.props} />
           </Tab>
           <Tab
             label="Week"
@@ -61,7 +60,7 @@ class Date extends Component {
             style={this.getStyle(this.state.slideIndex === 1)}
             onActive={() => this.props.setFilteredOrders(DATES.WEEK)}
           >
-            <Main info={this.props.orders} />
+            <Main sales={this.props} />
           </Tab>
           <Tab
             label="Month"
@@ -69,7 +68,7 @@ class Date extends Component {
             style={this.getStyle(this.state.slideIndex === 2)}
             onActive={() => this.props.setFilteredOrders(DATES.MONTH)}
           >
-            <Main info={this.props.orders} />
+            <Main sales={this.props} />
           </Tab>
         </Tabs>
       </div>

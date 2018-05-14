@@ -5,7 +5,6 @@ class Progress extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      ordered: 16,
       total: 20
     };
   }
@@ -13,10 +12,9 @@ class Progress extends Component {
   render() {
     return (
       <div style={{ padding: '20px 0px' }}>
-        {console.log('!!', this.props)}
         <LinearProgress
           mode="determinate"
-          value={this.state.ordered}
+          value={this.props.ordered}
           max={this.state.total}
           color="rgb(255, 132, 127)"
         />
@@ -32,10 +30,10 @@ class Progress extends Component {
           <tbody>
             <tr>
               <td style={{ float: 'left' }} className="sales-total">
-                135
+                {this.state.total}
               </td>
               <td style={{ float: 'right' }} className="sales-total">
-                124
+                {this.props.ordered}
               </td>
             </tr>
           </tbody>
