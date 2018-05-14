@@ -4,7 +4,7 @@
   "description": "Front End Project Interview",
   "main": "server/index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon index.js && webpack",
     "test": "mocha",
     "build": "webpack",
     "webpack": "webpack -w --mode=development"

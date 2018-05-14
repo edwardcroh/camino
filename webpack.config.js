@@ -16,9 +16,6 @@ const config = {
         loader: 'babel-loader'
       }
     ]
-  },
-  devServer: {
-    historyApiFallback: true
   }
 };
 

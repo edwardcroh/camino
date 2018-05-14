@@ -9,7 +9,8 @@ Front End Project Interview
 
 ======
 
-To start:
+https://peaceful-wave-99055.herokuapp.com/
+
 -server: npm start
 -webpack: npm run webpack
 -mocha: npm test
