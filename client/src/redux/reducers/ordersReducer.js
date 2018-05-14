@@ -19,6 +19,57 @@ const orders = [
     ]
   },
   {
+    purchaseDate: moment().subtract(3, 'days'),
+    items: [
+      {
+        name: 'hoodie',
+        price: 40
+      },
+      {
+        name: 'fitted cap',
+        price: 25
+      },
+      {
+        name: 'shoes',
+        price: 30
+      }
+    ]
+  },
+  {
+    purchaseDate: moment().subtract(6, 'days'),
+    items: [
+      {
+        name: 'hoodie',
+        price: 40
+      },
+      {
+        name: 'fitted cap',
+        price: 25
+      },
+      {
+        name: 'shoes',
+        price: 30
+      }
+    ]
+  },
+  {
+    purchaseDate: moment().subtract(2, 'days'),
+    items: [
+      {
+        name: 'hoodie',
+        price: 40
+      },
+      {
+        name: 'fitted cap',
+        price: 25
+      },
+      {
+        name: 'shoes',
+        price: 30
+      }
+    ]
+  },
+  {
     purchaseDate: moment().subtract(23, 'days'),
     items: [
       {
@@ -37,6 +88,91 @@ const orders = [
   },
   {
     purchaseDate: moment().subtract(29, 'days'),
+    items: [
+      {
+        name: 'hoodie',
+        price: 40
+      },
+      {
+        name: 'fitted cap',
+        price: 25
+      },
+      {
+        name: 'shoes',
+        price: 30
+      }
+    ]
+  },
+  {
+    purchaseDate: moment().subtract(28, 'days'),
+    items: [
+      {
+        name: 'hoodie',
+        price: 40
+      },
+      {
+        name: 'fitted cap',
+        price: 25
+      },
+      {
+        name: 'shoes',
+        price: 30
+      }
+    ]
+  },
+  {
+    purchaseDate: moment().subtract(27, 'days'),
+    items: [
+      {
+        name: 'hoodie',
+        price: 40
+      },
+      {
+        name: 'fitted cap',
+        price: 25
+      },
+      {
+        name: 'shoes',
+        price: 30
+      }
+    ]
+  },
+  {
+    purchaseDate: moment().subtract(25, 'days'),
+    items: [
+      {
+        name: 'hoodie',
+        price: 40
+      },
+      {
+        name: 'fitted cap',
+        price: 25
+      },
+      {
+        name: 'shoes',
+        price: 30
+      }
+    ]
+  },
+  {
+    purchaseDate: moment().subtract(12, 'days'),
+    items: [
+      {
+        name: 'hoodie',
+        price: 40
+      },
+      {
+        name: 'fitted cap',
+        price: 25
+      },
+      {
+        name: 'shoes',
+        price: 30
+      }
+    ]
+  },
+  {
+    purchaseDate: moment().subtract(20, 'days'),
     items: [
       {
         name: 'hoodie',
@@ -99,6 +235,14 @@ export default function(state = { orders, filteredOrders: orders }, action) {
       };
 
     default:
-      return state;
+      let today = moment();
+      return {
+        orders: orders,
+        filteredOrders: orders.filter(order => {
+          return moment(order.purchaseDate.format('YYYY-MM-DD')).isSame(
+            today.format('YYYY-MM-DD')
+          );
+        })
+      };
   }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Line } from 'react-chartjs-2';
+import { Line, Doughnut } from 'react-chartjs-2';
 
 class Data extends Component {
   constructor(props) {
@@ -67,6 +67,29 @@ class Data extends Component {
                     }
                   }
                 ]
+              }
+            }}
+          />
+        </div>
+        <br />
+        <div>
+          <Doughnut
+            data={{
+              labels: ['Hoodie', 'Fitted Cap', 'Bracelet'],
+              datasets: [
+                {
+                  data: [300, 50, 100],
+                  backgroundColor: ['#C85650', '#FFC541', '#00D5DC'],
+                  hoverBackgroundColor: ['#C85650', '#FFC541', '#00D5DC']
+                }
+              ]
+            }}
+            options={{
+              maintainAspectRatio: false,
+              legend: {
+                labels: {
+                  fontColor: 'rgb(255, 242, 210)'
+                }
               }
             }}
           />

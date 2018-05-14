@@ -4,6 +4,13 @@ import Data from './Data.jsx';
 import Sales from './Sales.jsx';
 
 class Main extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      totalOrders: this.props.info.length
+    };
+  }
+
   render() {
     return (
       <div>

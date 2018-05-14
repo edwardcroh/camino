@@ -38,6 +38,7 @@ class Date extends Component {
   render() {
     return (
       <div>
+        {console.log('?????', this.props.orders)}
         <Tabs
           onChange={this.handleChange}
           value={this.state.slideIndex}
@@ -52,7 +53,7 @@ class Date extends Component {
             style={this.getStyle(this.state.slideIndex === 0)}
             onActive={() => this.props.setFilteredOrders(DATES.TODAY)}
           >
-            <Main />
+            <Main info={this.props.orders} />
           </Tab>
           <Tab
             label="Week"
@@ -60,7 +61,7 @@ class Date extends Component {
             style={this.getStyle(this.state.slideIndex === 1)}
             onActive={() => this.props.setFilteredOrders(DATES.WEEK)}
           >
-            <Main />
+            <Main info={this.props.orders} />
           </Tab>
           <Tab
             label="Month"
@@ -68,7 +69,7 @@ class Date extends Component {
             style={this.getStyle(this.state.slideIndex === 2)}
             onActive={() => this.props.setFilteredOrders(DATES.MONTH)}
           >
-            <Main />
+            <Main info={this.props.orders} />
           </Tab>
         </Tabs>
       </div>
@@ -77,15 +78,10 @@ class Date extends Component {
 }
 
 const mapStateToProps = state => {
-  return {
-    orders: state.ordersByDate
-  };
+  // return {
+  //   orders: state.ordersByDate
+  // };
+  return state;
 };
-
-// const mapDispatchToProps = dispatch => ({
-//   DATES: TODAY => dispatch(actions.DATES(TODAY)),
-//   DATES: WEEK => dispatch(actions.DATES(WEEK)),
-//   DATES: MONTH => dispatch(actions.DATES(MONTH))
-// });
 
 export default connect(mapStateToProps, { setFilteredOrders })(Date);

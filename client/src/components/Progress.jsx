@@ -5,14 +5,15 @@ class Progress extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      ordered: 28,
-      total: 50
+      ordered: 16,
+      total: 20
     };
   }
 
   render() {
     return (
       <div style={{ padding: '20px 0px' }}>
+        {console.log('!!', this.props)}
         <LinearProgress
           mode="determinate"
           value={this.state.ordered}
