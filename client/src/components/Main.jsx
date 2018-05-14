@@ -15,11 +15,8 @@ class Main extends Component {
     };
   }
 
-  componentWillReceiveProps(props) {
+  componentWillMount() {
     let totalSales = 0;
-    let hoodieData = [];
-    let fittedData = [];
-    let braceletData = [];
     this.props.sales.orders.filteredOrders.map(order => {
       order.items.map(item => {
         totalSales += item.price;
@@ -27,8 +24,41 @@ class Main extends Component {
       return totalSales;
     });
 
+    let hoodieData = this.props.sales.orders.filteredOrders.map(order => {
+      return order.items.filter(item => {
+        return item.name === 'Hoodie';
+      });
+    });
+    let fittedData = this.props.sales.orders.filteredOrders.map(order => {
+      return order.items.filter(item => {
+        return item.name === 'Fitted Cap';
+      });
+    });
+    let braceletData = this.props.sales.orders.filteredOrders.map(order => {
+      return order.items.filter(item => {
+        return item.name === 'Bracelet';
+      });
+    });
+    this.setState({
+      totalOrders: this.props.sales.orders.filteredOrders.length,
+      totalSales: totalSales,
+      hoodie: hoodieData,
+      fitted: fittedData,
+      bracelet: braceletData
+    });
+  }
+
+  componentWillReceiveProps(props) {
+    let totalSales = 0;
     this.props.sales.orders.filteredOrders.map(order => {
       order.items.map(item => {
+        totalSales += item.price;
+      });
+      return totalSales;
+    });
+
+    let hoodieData = this.props.sales.orders.filteredOrders.map(order => {
+      return order.items.filter(item => {
         return item.name === 'Hoodie';
       });
     });
@@ -54,7 +84,6 @@ class Main extends Component {
   render() {
     return (
       <div>
-        {console.log(this.props.sales.orders.filteredOrders)}
         <Progress ordered={this.state.totalOrders} />
         <Data total={this.state.totalSales} data={this.props.sales} />
         <Sales info={this.state} />

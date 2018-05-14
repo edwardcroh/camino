@@ -15,10 +15,9 @@ class Sales extends Component {
     return (
       <div>
         <div className="data">
-          {console.log('^^^^^', this.props.info)}
           <span className="info-title">Sales</span>
           <br />
-          <span className="sales-total">{this.state.saleTotal}</span>
+          <span className="sales-total">{this.props.info.totalOrders}</span>
         </div>
         <div>
           <table className="sales-table">

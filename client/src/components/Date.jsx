@@ -77,9 +77,6 @@ class Date extends Component {
 }
 
 const mapStateToProps = state => {
-  // return {
-  //   orders: state.ordersByDate
-  // };
   return state;
 };
 

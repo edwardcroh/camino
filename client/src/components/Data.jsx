@@ -10,32 +10,15 @@ class Data extends Component {
     };
   }
 
-  componentWillReceiveProps() {
+  componentWillReceiveProps(props) {
     this.setState({
-      totalOrders: this.props.total
+      total: this.props.total
     });
-  }
-
-  labelCountHelper(num) {
-    let result = [];
-    for (var i = 1; i < num.length; i++) {
-      result.push(i);
-    }
-    return result;
-  }
-
-  randomDataHelper(num) {
-    let result = [];
-    for (var i = 1; i < num.length; i++) {
-      result.push(Math.floor(Math.random() * (5 - 1 + 1)) + 1);
-    }
-    return result;
   }
 
   render() {
     return (
       <div>
-        {console.log('!!!!!///', this.state)}
         <div className="data">
           <span className="info-title">Total Sales</span>
           <br />
@@ -44,13 +27,11 @@ class Data extends Component {
         <div>
           <Line
             data={{
-              // labels: this.labelCountHelper(this.state.total),
-              labels: [1, 2, 3, 4, 5],
+              labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
               datasets: [
                 {
                   label: 'HOODIE',
-                  // data: this.randomDataHelper(this.state.total),
-                  data: [4, 3, 6, 3],
+                  data: [4, 3, 6, 3, 2, 6, 8, 8, 5, 4],
                   backgroundColor: '#B75464',
                   borderWidth: 1,
                   radius: 0
